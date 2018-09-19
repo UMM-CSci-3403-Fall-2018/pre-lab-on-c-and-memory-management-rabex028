@@ -1,6 +1,6 @@
 # Leak report
 
-The memory errors seem to have stemmed from allocating memory on line 41 of the program in the strip function.
+The memory leak seem to have stemmed from allocating memory on line 41 of the program in the strip function.
 This memory is never freed, even after the program is finished with the variable it is used for (char* _result_ in strip).
 
 Result is returned to the is_clean function for comparing strings passed to the program as paramaters and their cleaned counterparts.
